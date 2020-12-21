@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+    <title>Main</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="/styleSheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/styleSheet.js"></script>
+</head>
+
+<body>
+    <div class="container">
+		<div th:replace="fragments/navbar"></div>
+        <h2><strong>Welcome!</strong></h2> 
+	</div>	
+		
+<!-- ******** Grid Layout 3 columns ******** -->
+		<div class="container">
+  			<div class="row">
+   			 <div class="col-sm-4">
+     			 
+     			 <p>Hello, i'm glad you decided to check out my page.</p>
+     			 <p>The content on this page is a work in progress and will change periodically.</p>
+   			 </div>
+    	<div class="col-sm-4">
+     			 <h3>Who am I?</h3>
+    			 <p><img src="C:\Users\ty1sh\Documents\TTS\picsandicons\NBheadshot.jpg" height="200px" width="150px" alt="" /></p>
+     			 <p></p>
+    		</div>
+   		<div class="col-sm-4">
+     			 <h3>Explore</h3>        
+      			 <p>To learn more about who I am and some of the things I have accomplish click the menu above.</p>
+     			 <p>"Success is to be measured no so much by the position that one has reached in life as by the obstacles which he has overcome while trying to succeed. <br>-Booker T. Washington"</p>
+    		</div>
+  		</div>
+		</div>
+	<br>
+	<br>	
+<!-- ************ Form **************** -->
+	<div class="containerForm">
+		<h5>Please fill out the below information</h5>
+		
+		<form th:action="@{/main}" method="post"><br/>
+ 		<div class="row">
+    		 <div class="col">
+     			 <input type="text" class="form-control" placeholder="First name">
+   			 </div>
+    		 <div class="col">
+      			<input type="text" class="form-control" placeholder="Last name">
+   			 </div>
+			 <div class="col">
+	 			 <input type="text" class="form-control" placeholder="E-mail">
+			 </div>
+				 <button class="btn btn-md btn-success btn-block" name="Submit" value="Login" type="Submit">Submit</button> 
+ 		</div>
+		</form>		
+		
+	</div>	
+		
+
+</body>
+</head>
